@@ -1,3 +1,6 @@
+# Compiled project
+build/
+
 # IDE workspaces
 *.sublime-project
 *.sublime-workspace
