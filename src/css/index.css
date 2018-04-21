@@ -1,0 +1,15 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.browserupgrade {
+  margin: 0;
+  padding: 16px;
+  background: #ffffaa;
+  text-align: center;
+  line-height: 2;
+}
