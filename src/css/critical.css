@@ -1,0 +1,23 @@
+@import 'normalize.css';
+/* GLOBALS */
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.root-notifications > * {
+  display: block;
+  margin: 0;
+  padding: 16px;
+  background: #ffa;
+  text-align: center;
+  line-height: 2;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
