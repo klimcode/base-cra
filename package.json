@@ -1,7 +1,7 @@
 {
   "name": "base-cra",
   "version": "0.1.0",
-  "private": true,
+  "description": "CRA-based boilerplate",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -9,13 +9,11 @@
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
-    "cors": "^2.8.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "fs-handy-wraps": "^2.1.0",
     "react-html-stringifier": "^0.6.0",
     "source-map-explorer": "^1.5.0",
     "stats-webpack-plugin": "^0.6.2"
