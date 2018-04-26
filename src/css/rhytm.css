@@ -1,0 +1,108 @@
+/* 16px Vertical Rhytm based on paddings */
+
+.fs_12 {
+  margin: 0 0 -3px 0;
+  padding: 19px 0 0 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+.fs_14 {
+  margin: 0 0 -2px 0;
+  padding: 18px 0 0 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+.fs_16 {
+  margin: 0;
+  padding: 25px 0 7px 0;
+  font-size: 16px;
+  line-height: 32px;
+}
+.fs_16_low {
+  padding: 0 0 7px 0;
+  margin: -7px 0 0 0;
+  font-size: 16px;
+  line-height: 32px;
+}
+.fs_18 {
+  margin: 0;
+  padding: 24px 0 8px 0;
+  font-size: 18px;
+  line-height: 32px;
+}
+.fs_20 {
+  margin: 0;
+  padding: 24px 0 8px 0;
+  font-size: 20px;
+  line-height: 32px;
+}
+.fs_24 {
+  margin: 0;
+  padding: 22px 0 10px 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+.fs_32 {
+  margin: 0 0 -3px 0;
+  padding: 67px 0 0 0;
+  font-size: 32px;
+  line-height: 64px;
+}
+.fs_32_low {
+  margin: 0 0 -3px 0;
+  padding: 3px 0 0 0;
+  font-size: 32px;
+  line-height: 64px;
+}
+.fs_40 {
+  margin: 0;
+  padding: 64px 0 0 0;
+  font-size: 40px;
+  line-height: 64px;
+}
+.fs_40_low {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 64px;
+}
+.fs_48 {
+  margin: 0;
+  padding: 61px 0 3px 0;
+  font-size: 48px;
+  line-height: 64px;
+}
+.fs_48_low {
+  margin: -3px 0 0 0;
+  padding: 0 0 3px 0;
+  font-size: 48px;
+  line-height: 64px;
+}
+.fs_56 {
+  margin: 0;
+  padding: 58px 0 6px 0;
+  font-size: 56px;
+  line-height: 64px;
+}
+.fs_56_low {
+  margin: -6px 0 0 0;
+  padding: 0 0 6px 0;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+/* extra elements */
+.hr_64 {
+  margin: 32px 0 30px 0;
+}
+.table_16 {
+  min-width: 320px;
+  margin: 0 auto 16px;
+  border-collapse: collapse;
+}
+.table_16 td {
+  padding: 9px 0 6px 0;
+  font-size: 16px;
+  line-height: 32px;
+  border-bottom: 1px solid #aaa;
+}

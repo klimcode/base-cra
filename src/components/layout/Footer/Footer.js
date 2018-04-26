@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <div className="app__footer">
         <div className="app__container">
-          Footer
+          {this.props.children}
         </div>
       </div>
     );

@@ -1,33 +1,20 @@
 @import 'normalize.css';
+@import 'rhytm.css';
 
 /* GLOBALS */
 html {
   height: 100%;
-  font-family: sans-serif;
+  color: #222;
+  font-family: 'opensans', sans-serif;
   font-size: 16px;
 }
-body {
+body, #root {
   height: 100%;
 }
-#root {
-  height: 100%;
-}
-.root-notifications > * {
-  display: block;
-  margin: 0;
-  padding: 16px;
-  background: #ffa;
-  text-align: center;
-  line-height: 2;
-}
-::-moz-selection {
+::-moz-selection, ::selection {
   background: #b3d4fc;
-  text-shadow: none;
 }
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
+
 
 /* LAYOUT */
 .app {
@@ -36,15 +23,20 @@ body {
   min-height: 100%;
   min-width: 320px;
 }
-.app__header {
-}
-.app__body {
-  flex: 1 0 auto;
-}
-.app__footer {
-  flex-shrink: 0;
-}
+/* .app__header {} */
+.app__body { flex: 1 0 auto; }
+.app__footer { flex-shrink: 0; }
 .app__container {
   margin: auto;
-  max-width: 900px;
+  max-width: 800px;
+}
+
+
+/* CUSTOM STYLES FOR THE FIRST SCREEN */
+
+@media screen and (min-width: 541px) { /* > Sony Xperia screen */
+}
+@media screen and (min-width: 976px) { /* 960px + 8px*2 mobile paddings */
+}
+@media screen and (min-width: 1370px) { /* > Surface pro 4 screen */
 }

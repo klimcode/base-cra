@@ -5,7 +5,7 @@ export default class Header extends Component {
     return (
       <div className="app__header">
         <div className="app__container">
-          Header
+          <h1 className="fs_40">_________</h1>
         </div>
       </div>
     );
