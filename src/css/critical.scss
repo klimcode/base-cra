@@ -1,0 +1,57 @@
+@import './vendor/normalize.css';
+@import './vendor/rhytm.scss';
+
+// GLOBALS
+html {
+  height: 100%;
+  color: #222;
+  font-family: 'opensans', sans-serif;
+  font-size: 16px;
+}
+body, #root {
+  height: 100%;
+}
+::-moz-selection, ::selection {
+  background: #b3d4fc;
+}
+
+
+// LAYOUT
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+
+  @extend %ruler;
+}
+// .app__header {}
+.app__body { flex: 1 0 auto; }
+.app__footer { flex-shrink: 0; }
+.app__container {
+  margin: auto;
+  max-width: 800px;
+}
+
+
+// CUSTOM STYLES FOR THE FIRST SCREEN
+.app__header h1 { @extend %rhytm_40; }
+.app__header p { @extend %rhytm_16; }
+.app__header .app__container {
+  display: flex;
+}
+.rhytm_table { @extend %rhytm_table; }
+.rhytm_table td { @extend %rhytm_table__td16; }
+
+
+// > Sony Xperia screen
+@media screen and (min-width: 541px) {
+}
+
+// 960px + 8px*2 mobile paddings
+@media screen and (min-width: 976px) {
+}
+
+// > Surface pro 4 screen
+@media screen and (min-width: 1370px) {
+}

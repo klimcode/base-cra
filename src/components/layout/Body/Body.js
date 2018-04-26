@@ -5,11 +5,11 @@ export default class Body extends Component {
     return (
       <div className="app__body">
         {
-          this.props.children.map((child, i) => (
-            <div className="app__container" key={i}>
-              {child}
-            </div>
-          ))
+          // this.props.children.map((child, i) => (
+          //   <div className="app__container" key={i}>
+          //     {child}
+          //   </div>
+          // ))
         }
       </div>
     );
