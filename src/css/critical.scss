@@ -17,6 +17,8 @@ body, #root {
 
 
 // LAYOUT
+$mobile_padding: 8px;
+$screen_threshold: 960px;
 .app {
   display: flex;
   flex-direction: column;
@@ -25,33 +27,32 @@ body, #root {
 
   @extend %ruler;
 }
-// .app__header {}
+.app__header {}
 .app__body { flex: 1 0 auto; }
 .app__footer { flex-shrink: 0; }
 .app__container {
-  margin: auto;
-  max-width: 800px;
+  padding: 0 8px;
 }
 
 
-// CUSTOM STYLES FOR THE FIRST SCREEN
-.app__header h1 { @extend %rhytm_40; }
-.app__header p { @extend %rhytm_16; }
-.app__header .app__container {
-  display: flex;
-}
-.rhytm_table { @extend %rhytm_table; }
-.rhytm_table td { @extend %rhytm_table__td16; }
+// CUSTOM STYLES
+h1 { @extend %rhytm_40; }
+h2 { @extend %rhytm_32; }
+p { @extend %rhytm_16; }
 
 
-// > Sony Xperia screen
+// Tablets: > Sony Xperia screen
 @media screen and (min-width: 541px) {
 }
 
-// 960px + 8px*2 mobile paddings
-@media screen and (min-width: 976px) {
+// Laptops
+@media screen and (min-width: $screen_threshold + 2*$mobile_padding) {
+  .app__container {
+    margin: auto;
+    max-width: $screen_threshold;
+  }
 }
 
-// > Surface pro 4 screen
+// Huge Screens: > Surface pro 4 screen
 @media screen and (min-width: 1370px) {
 }

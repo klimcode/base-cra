@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import App from './common_bundle/App';
 import './css/critical.css';
 // import registerServiceWorker from './registerServiceWorker';
 // lazy loading
