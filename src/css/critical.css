@@ -1,53 +1,38 @@
-@import url(./vendor/normalize.css);
-p {
-  margin: 0;
-  padding: 25px 0 7px 0;
-  font-size: 16px;
-  line-height: 32px; }
+@import './vendor/normalize.css';
 
-h2 {
-  margin: 0 0 -3px 0;
-  padding: 67px 0 0 0;
-  font-size: 32px;
-  line-height: 64px; }
-
-h1 {
-  margin: 0;
-  padding: 64px 0 0 0;
-  font-size: 40px;
-  line-height: 64px; }
-
-.app {
-  background: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px) left -1px/16px 16px, linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) left -1px/64px 64px; }
-
+/* GLOBALS */
 html {
   height: 100%;
   color: #222;
   font-family: 'opensans', sans-serif;
-  font-size: 16px; }
-
+  font-size: 16px;
+}
 body, #root {
-  height: 100%; }
-
+  height: 100%;
+}
 ::-moz-selection, ::selection {
-  background: #b3d4fc; }
+  background: #b3d4fc;
+}
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  min-width: 320px; }
 
-.app__body {
-  flex: 1 0 auto; }
+/* CUSTOM STYLES */
+/* h1 { @extend %rhytm_40; }
+h2 { @extend %rhytm_32; }
+p { @extend %rhytm_16; } */
 
-.app__footer {
-  flex-shrink: 0; }
 
-.app__container {
-  padding: 0 8px; }
+/* Tablets: > Sony Xperia screen */
+@media screen and (min-width: 541px) {
+}
 
-@media screen and (min-width: 976px) {
+/* Laptops */
+@media screen and (min-width: 960px) {
   .app__container {
     margin: auto;
-    max-width: 960px; } }
+    max-width: 960px;
+  }
+}
+
+/* Huge Screens: > Surface pro 4 screen */
+@media screen and (min-width: 1370px) {
+}
