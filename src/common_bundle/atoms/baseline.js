@@ -33,30 +33,42 @@ const METRICS = {
 };
 
 
-const _chooseFontProp = (props) => {
+const _getMetricsId = (props) => {
   const { component } = props;
   const themeFontSize = props.theme && props.theme[component] && props.theme[component].fontSize;
   return props.fs || themeFontSize || props.fontSizeDef || FS_DEF;
-}
-const _getFontSize = (props) => {
-  const fontProp = _chooseFontProp(props);
-
-  if (typeof fontProp === 'number') return fontProp;
-  return parseInt(fontProp, 10) || FS_DEF;
 };
-const _getMetrics = (props) => {
-  console.log(props);
+const memoize = (fn) => {
+  const memoCache = {};
+  return (arg) => {
+    const metricsId = _getMetricsId(arg);
+    debugger;
+    if (metricsId in memoCache) {
+      return memoCache[metricsId];
+    }
+
+    const result = fn(metricsId);
+    memoCache[metricsId] = result;
+    return result;
+  };
+};
+const _getFontSize = (metricsId) => {
+  if (typeof metricsId === 'number') return metricsId;
+  return parseInt(metricsId, 10) || FS_DEF;
+};
+const _getMetrics = (metricsId) => {
   const defaultMetrics = METRICS[FS_DEF];
-  const fontProp = _chooseFontProp(props);
 
-  if (typeof fontProp === 'number') return METRICS[fontProp] || defaultMetrics;
+  if (typeof metricsId === 'number') return METRICS[metricsId] || defaultMetrics;
 
-  const fontSize = _getFontSize(props);
-  const id = fontProp.includes('low') ? `low${fontSize}` : fontSize;
+  const fontSize = _getFontSize(metricsId);
+  const id = metricsId.includes('low') ? `low${fontSize}` : fontSize;
 
   return METRICS[id] || defaultMetrics;
 };
+const getMetrics = memoize(_getMetrics);
 
-export const getFontSize = props => `${_getFontSize(props)}px`;
-export const getPaddings = props => _getMetrics(props).padding;
-export const getMargins = props => _getMetrics(props).margin;
+export const getMargins = props => getMetrics(props).margin;
+export const getPaddings = props => getMetrics(props).padding;
+export const getFontSize = props => getMetrics(props).fontSize;
+export const getLineHeight = props => getMetrics(props).lineHeight;

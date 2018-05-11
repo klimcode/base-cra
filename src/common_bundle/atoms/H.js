@@ -1,6 +1,6 @@
 // import React from 'react';
 import styled from 'styled-components';
-import { getFontSize, getMargins, getPaddings } from './baseline';
+import { getFontSize, getLineHeight, getMargins, getPaddings } from './baseline';
 
 
 export const H1 = styled.h1`
@@ -8,6 +8,7 @@ export const H1 = styled.h1`
   padding: ${getPaddings};
   font-weight: bold;
   font-size: ${getFontSize};
+  line-height: ${getLineHeight};
   color: ${props => props.color || props.theme.color};
 `;
 H1.defaultProps = {

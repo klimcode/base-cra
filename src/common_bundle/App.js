@@ -2,24 +2,19 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { Wrapper, Header, Body, Footer } from './layout';
-import { H1, H2, H3 } from './atoms';
-
-const theme = {
-  color: 'red',
-  h1: {
-    fontSize: 40,
-  },
-};
+import { H1, H2 } from './atoms';
+import theme from './theme';
 
 export default () => (
   <ThemeProvider theme={theme}>
     <Wrapper>
       <Header>
-        <H1>
+        <H1 fs={56}>
           Hoi
         </H1>
       </Header>
       <Body>
+        <H2>Header level 2</H2>
         <p>
           Lorem ipsum, dolor sit amet consectetur
           adipisicing elit. Eos corrupti qui, porro
