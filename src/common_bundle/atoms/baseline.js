@@ -19,6 +19,12 @@ const METRICS = {
     font-size: 32px;
     line-height: 64px;
   `,
+  openSans_40: `
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 64px;
+  `,
   openSans_40_gap: `
     margin: 0;
     padding: 64px 0 0 0;
@@ -31,24 +37,39 @@ const METRICS = {
     font-size: 56px;
     line-height: 64px;
   `,
+  openSans_56_gap: `
+    margin: 0;
+    padding: 58px 0 6px 0;
+    font-size: 56px;
+    line-height: 64px;
+  `,
 };
 
 
+/* eslint-disable no-console */
 const getMetrics = (props) => {
   const { component, theme } = props;
   const fontFamily = theme && theme.fontFamily;
   const fontSize = theme && theme.fontSize;
   const themeComponentStyles = theme && theme[component];
 
-  const themeFontFamily = fontFamily || (themeComponentStyles && themeComponentStyles.fontFamily);
-  const themeFontSize = fontSize || (themeComponentStyles && themeComponentStyles.fontSize);
+  const themeFontFamily = (themeComponentStyles && themeComponentStyles.fontFamily) || fontFamily;
+  const themeFontSize = (themeComponentStyles && themeComponentStyles.fontSize) || fontSize;
+  const themeGap = themeComponentStyles && themeComponentStyles.gap;
   const finalFontFamily = props.ff || themeFontFamily || FF_DEF;
   const finalFontSize = props.fs || themeFontSize || props.fontSizeDef || FS_DEF;
 
-  let id = `${finalFontFamily}_${finalFontSize}`;
-  // if (props.fs.includes('gap')) id += '_gap';
 
-  return METRICS[id] || METRICS_DEF;
+  const gap = ((props.gap || themeGap || props.gapDef) && '_gap') || '';
+  const id = `${finalFontFamily}_${finalFontSize}${gap}`;
+
+  const result = METRICS[id];
+  // debugger;
+  if (!result && console && console.error) {
+    console.error(`Font Metrics "${id}" for "${component}" component not found. Default Metrics used instead.`);
+  }
+
+  return result || METRICS_DEF || '';
 };
 
 

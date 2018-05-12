@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Layout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -12,10 +12,10 @@ const Container = styled.div`
   max-width: 600px;
 `;
 const HeaderStyled = styled.div`
-  display: flex;
+  /* display: flex; */
 `;
 const BodyStyled = styled.div`
-  display: flex;
+  /* display: flex; */
   flex: 1 0 auto;
 `;
 const FooterStyled = styled.div`
@@ -47,4 +47,4 @@ const Footer = props => (
 );
 
 
-export { Wrapper, Container, Header, Body, Footer };
+export { Layout, Container, Header, Body, Footer };

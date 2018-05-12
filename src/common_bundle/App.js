@@ -1,15 +1,15 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { Wrapper, Header, Body, Footer } from './layout';
+import { Layout, Header, Body, Footer } from './layout';
 import { H1, H2 } from './atoms';
 import theme from './theme';
 
 export default () => (
   <ThemeProvider theme={theme}>
-    <Wrapper>
+    <Layout>
       <Header>
-        <H1 fs={56}>
+        <H1>
           Hoi
         </H1>
       </Header>
@@ -27,6 +27,6 @@ export default () => (
         <h2>Footer</h2>
         <h2>xxx</h2>
       </Footer>
-    </Wrapper>
+    </Layout>
   </ThemeProvider>
 );
